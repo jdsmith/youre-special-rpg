@@ -1,7 +1,7 @@
 export default {
     strength: {
         label: 'S is for Strength',
-        melee: {
+        trees: [{
             label: 'Melee',
             tier1: [
                 {
@@ -40,7 +40,7 @@ export default {
                 },
             ],
         },
-        utility: {
+        {
             label: 'Utility',
             tier1: [
                 {
@@ -79,7 +79,7 @@ export default {
                 }
             ],
         },
-        heavyWeapons: {
+        {
             label: 'Heavy Weapons',
             tier1: [
                 {
@@ -117,7 +117,7 @@ export default {
                     description: 'Laying down a tactical blanket of bullets or a fearful barrage of explosions can open up many opportunities. When you miss a target with a heavy weapon attack, or targets successfully avoid an Area attack from your heavy weapon, those targets grant Combat Advantage to your allies until the end of your next turn.',
                 },
             ],
-        },
+        }],
     },
     perception: {
         label: 'P is for Perception',
@@ -583,61 +583,88 @@ export default {
             tier1: [{
                 label: 'Fortune Finder',
                 shortDescription: 'Spend 1 Luck Point to gain 20x L successes',
-                description: '',
+                description: 'Leaving no stone unturned means no cap is left behind. You may spend a Luck point and make a Luck test to gain a number of caps equal to 20 times the number of successes. If you use this ability during combat, it costs 3 Action Points.',
             },{
                 label: 'Lucky Break',
                 shortDescription: 'Spend 1 Luck Point to prevent condition damage',
-                description: '',
+                description: 'Sometimes you walk out of that explosion looking like a million bucks. At the end of an encounter, you may choose a piece of gear and spend a luck point to avoid that piece of gear deteriorating.',
             }],
             tier2: [{
                 label: 'Junk Shield',
                 shortDescription: 'Gain up to 6 DR per junk carried',
-                description: '',
+                description: 'You’re carrying so much junk that it’s bound to catch a bullet or two. You gain 1 Damage Reduction for each piece of Junk you are carrying, up to a max of 5.',
             },{
                 label: 'Nuka Fiend',
                 shortDescription: 'Nuka Cola grants +1 L',
-                description: '',
+                description: 'There’s always time for a Nuka break. When you drink a Nuka Cola, your Luck is increased by 1 until the end of the current encounter.',
             }],
             tier3: [{
                 label: 'Super Duper',
                 shortDescription: 'Spend 1 Luck Point to craft 2 of an item',
-                description: '',
+                description: 'Is it luck, or are you bending the reality of space and time? When you finish crafting an item or mod from a recipe, you may immediately spend a Luck point to craft 2 of that item instead of 1.',
             },{
                 label: 'Dry Nurse',
                 shortDescription: 'Spend 1 Luck Point to use a stimpak without consuming it',
-                description: '',
+                description: 'You’ve always got an extra stimpak hidden somewhere. When you use a stimpak to heal yourself or others, you may spend a luck point to gain the benefits of the stimpak without consuming it.',
             }]
         },{
             label: 'Vengeful',
             tier1: [{
                 label: 'Just a Flesh Wound',
                 shortDescription: 'Spend 1 Luck Point to avoid a Crit',
-                description: '',
+                description: 'Your injuries are never as bad as they look. When you would suffer a critical injury, you may spend a Luck point to negate that injury. You must decide to spend your Luck point before the critical injury roll is made, but the Overseer should tell you the number of bonus successes being applied to the roll.',
             },{
                 label: 'Bloody Mess',
                 shortDescription: 'Spend 1 Luck Point to add L to DAM',
-                description: ''
+                description: 'People seem to really explode around you. When you deal damage you may spend a Luck point to add your Luck score to the damage dealt.'
             }],
             tier2: [{
                 label: 'Ricochet',
                 shortDescription: 'Spend 1 Luck Point to direct DAM dodged to an opponent',
-                description: '',
+                description: 'Not only do bullets seem to miss you completely but they inexplicably end up in the bodies of your opponents. If you successfully dodge a ranged attack, you may immediately spend a Luck point to deal the damage that would have been dealt to you to an opponent of your choice that you can see.',
             },{
                 label: 'Critical Hit',
                 shortDescription: '-2 AP for VATS once per encounter',
-                description: '',
+                description: 'You have a knack for hitting your target without even trying. Once per encounter, you may make a targeted V.A.T.S. attack for 1 fewer Action Points.',
             }],
             tier3: [{
                 label: 'Grim Reaper\'s Sprint',
                 shortDescription: 'Gain 1 AP after killing an opponent',
-                description: '',
+                description: 'The downfall of your enemies spurs you on. On your turn, when you kill an enemy, you immediately gain 1 Action Point. ',
             },{
                 label: 'Mysterious Stranger',
                 shortDescription: 'Spend 1 Luck Point to summon the Mysterious Stranger',
-                description: '',
+                description: 'You don’t know who he is or where he came from, but you’re glad he’s on your side. At the end of your turn, you may spend a Luck point to summon the Mysterious Stranger. The Mysterious Stranger appears and takes his first turn. The Mysterious Stranger remains until the end of the encounter and takes his turn immediately after yours.',
             }],
         },{
             label: 'Skillful',
+            tier1: [{
+                label: 'Lucky Guess',
+                shortDescription: 'Roll L to hack terminals',
+                description: 'Who needs all that brain power when the password is “password”? When attempting to hack a terminal or bypass electronic security, you may roll Luck instead of Intelligence.',
+            },{
+                label: 'Unassuming',
+                shortDescription: 'Roll L to sneak',
+                description: 'You are the right type of unassuming that always gets passed by, allowing you to blend into the background. When attempting to sneak around and avoid detection, you may roll Luck instead of Agility.',
+            }],
+            tier2: [{
+                label: 'Missed Me!',
+                shortDescription: 'Roll L to dodge',
+                description: 'Enemies can’t seem to hit you, and you aren’t even trying! When performing a test to dodge an attack, you may roll Luck instead of Agility.',
+            },{
+                label: 'Divine Intervention',
+                shortDescription: 'Roll L to Cheat Death',
+                description: 'By all rights you should be dead. Someone must be watching out for you. You may roll Luck instead of Endurance when attempting to cheat death.',
+            }],
+            tier3: [{
+                label: 'Spray and Pray',
+                shortDescription: 'Roll L for ranged attacks',
+                description: 'Throw enough bullets at a problem and the problem goes away. When performing an attack at close range or farther, you may roll Luck instead of the weapon’s attack ability.',
+            },{
+                label: 'Wild Swing',
+                shortDescription: 'Roll L for melee attacks',
+                description: 'Just keep swinging! You’re bound to hit something eventually! You may roll Luck instead of a weapon’s attack attribute whenever you make a melee attack.',
+            }],
         }],
     },
 };

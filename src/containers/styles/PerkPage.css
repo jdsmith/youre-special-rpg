@@ -1,0 +1,34 @@
+.perk-trees {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+}
+
+#perkPage {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Attribute Colors */
+.strength .perk h3 {
+    background-color: #7bab7f;
+}
+.perception .perk h3 {
+    background-color: #a3713d;
+}
+.endurance .perk h3 {
+    background-color: #38b0bc;
+}
+.charisma .perk h3 {
+    background-color: #d58a28;
+}
+.intelligence .perk h3 {
+    background-color: #c2b492;
+}
+.agility .perk h3 {
+    background-color: #c6745d;
+}
+.luck .perk h3 {
+    background-color: #b7a8b4;
+}
+

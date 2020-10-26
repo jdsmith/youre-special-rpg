@@ -1,0 +1,20 @@
+.perk {
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+}
+
+.perk h3 {
+    background-color: #333;
+    color: #e6e6e6;
+    margin: 0;
+    padding: 1em 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 3px solid #e6e6e6;
+}
+
+.perk p {
+    height: 75px;
+    padding: 0 10px;
+}
