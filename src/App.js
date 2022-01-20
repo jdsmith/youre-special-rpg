@@ -8,13 +8,16 @@ import {
 import logo from './logo.svg';
 import './App.css';
 import PerkPage from './containers/PerkPage';
+import HomePage from './containers/HomePage';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <Link to="/">
+            <img src={logo} className="App-logo" alt="logo" />
+          </Link>
           <Link
             className="App-link"
             to="/perks/strength"
@@ -61,6 +64,9 @@ function App() {
         <Switch>
           <Route path="/perks/:category">
             <PerkPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
           </Route>
         </Switch>
       </Router>
