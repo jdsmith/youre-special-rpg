@@ -51,3 +51,12 @@ main {
   color: #333;
   text-decoration: none;
 }
+
+.flex-gap {
+  display: flex;
+  column-gap: 30px;
+}
+
+.flex-gap.center {
+  justify-content: center;
+}

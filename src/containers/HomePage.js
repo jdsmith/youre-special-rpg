@@ -1,6 +1,8 @@
 import React from 'react';
 import CoverArt from '../images/wasteland-survival-cover.png';
+import CharacterSheetImage from '../images/character_sheet.png';
 import SurvivorsPDF from "../files/You're _SPECIAL_WSG_v1.3.pdf";
+import CharacterSheetsPDF from "../files/youre_special_character_sheets.pdf";
 import './styles/HomePage.css';
 
 export const HomePage = () => (
@@ -14,12 +16,21 @@ export const HomePage = () => (
         <p>
             This game has been lovingly written for anyone who is a fan of the Fallout series, post-apocalyptia and roleplaying games. If you wish to create characters and experience new stories set in the Wasteland, then this game is for you. The goal is that this will feel like Fallout to the fans of the franchise.
         </p>
-        <section className="download-container">
-            <img src={CoverArt} alt="Wasteland Survival Guide Cover" height="200" />
-            <h2>Get Started with the Wasteland Survival Guide</h2>
-            <a className="download-button" href={SurvivorsPDF} download>
-                Download
-            </a>
+        <section className="flex-gap center">
+            <div className="download-container">
+                <img src={CoverArt} alt="Wasteland Survival Guide Cover" height="200" />
+                <h2>Wasteland Survival Guide</h2>
+                <a className="download-button" href={SurvivorsPDF} download>
+                    Download
+                </a>
+            </div>
+            <div className="download-container">
+                <img src={CharacterSheetImage} alt="Wasteland Survival Guide Cover" height="200" />
+                <h2>Character Sheets</h2>
+                <a className="download-button" href={CharacterSheetsPDF} download>
+                    Download
+                </a>
+            </div>
         </section>
     </main>
 );
