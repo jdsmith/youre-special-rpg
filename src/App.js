@@ -5,9 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import logo from './logo.svg';
+import logo from './images/special-logo.png';
 import './App.css';
-import PerkPage from './containers/PerkPage';
 import HomePage from './containers/HomePage';
 
 function App() {
@@ -15,10 +14,11 @@ function App() {
     <div className="App">
       <Router>
         <header className="App-header">
-          <Link to="/">
-            <img src={logo} className="App-logo" alt="logo" />
+          <h1>You&apos;re&nbsp;</h1>
+          <Link to="/" className="App-link">
+            <img src={logo} className="App-logo" alt="logo" aria-label="Special" />
           </Link>
-          <Link
+          {/* <Link
             className="App-link"
             to="/perks/strength"
           >
@@ -59,12 +59,12 @@ function App() {
             to="/perks/luck"
           >
             Luck Perks
-          </Link>
+          </Link> */}
         </header>
         <Switch>
-          <Route path="/perks/:category">
+          {/* <Route path="/perks/:category">
             <PerkPage />
-          </Route>
+          </Route> */}
           <Route path="/">
             <HomePage />
           </Route>
