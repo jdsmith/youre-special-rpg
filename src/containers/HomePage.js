@@ -1,7 +1,7 @@
 import React from 'react';
 import CoverArt from '../images/wasteland-survival-cover.png';
 import CharacterSheetImage from '../images/character_sheet.png';
-import SurvivorsPDF from "../files/You're _SPECIAL_WSG_v1.5.pdf";
+import SurvivorsPDF from "../files/You're_SPECIAL_WSG_v1.6.pdf";
 import CharacterSheetsPDF from "../files/youre_special_character_sheets.pdf";
 import './styles/HomePage.css';
 
